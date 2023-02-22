@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.heading{
+    height:100px;
+    text-align: center;
+    background-color: antiquewhite;
+    margin-bottom: 50px;
+}
+h2{
+    position: relative;
+    top:20px;
+    color: brown;
+    font-size: 40px;
+}
+.table{
+    height: 200px;
+    width:1200px;
+    margin: 40px 60px;
+
+}

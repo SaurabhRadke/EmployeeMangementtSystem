@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(195, 252, 233);
+}
+.container{
+    height: 600px;
+    width: 1100px;
+    margin: 20px 120px;
+    display: flex;
+}
+.left{
+    width: 550px;
+    height:580px;
+    background-image: url("/static/image/peakpx.jpg");
+    background-repeat: no-repeat;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    
+}
+.right{
+    width: 550px;
+    height:580px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    background-color: aliceblue;
+}
+.l{
+    position: relative;
+    left:200px;
+    margin: 30px 30px;
+    color: rgb(23, 135, 240);
+    font-size: 30px;
+    border: 2px solid rgb(23, 135, 240);
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: aliceblue;
+}
+#logo{
+    margin-top: 15px;
+}
+h2{
+    font-family: 'Rubik', sans-serif;
+    font-size: 30px;
+    width:200px;
+    position: relative;
+    left: 170px;
+    background-color: aliceblue;
+
+}
+form{
+    background-color: aliceblue;
+    margin-top: 10px;
+    margin-left: 80px;
+}
+label{
+    font-family:'Rubik', sans-serif ;
+    background-color: aliceblue;
+    font-size: 15px;
+
+}
+input{
+    border-radius: 20px;
+    padding: 10px;
+    width: 270px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: aliceblue;
+    font-family: 'Rubik', sans-serif;
+}
+h6{
+    font-family:'Rubik', sans-serif ;
+    margin-top: 10px;
+    background-color: aliceblue;
+    margin-left: 190px;
+    color: rgba(48, 41, 41, 0.788);
+}
+button{
+    margin-top: 10px;
+    border-radius: 20px;
+    width: 300px;
+    padding: 10px;
+    background-color:rgb(3, 58, 209) ;
+    font-size: 20px;
+    font-family:'Rubik', sans-serif ;
+    color: aliceblue;
+}

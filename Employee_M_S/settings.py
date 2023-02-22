@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -68,6 +69,7 @@ TEMPLATES = [
     },
 ]
 
+
 WSGI_APPLICATION = 'Employee_M_S.wsgi.application'
 
 
@@ -76,8 +78,12 @@ WSGI_APPLICATION = 'Employee_M_S.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'gitdatabase',
+        'USER':'root',
+        'PASSWORD':'Root',
+        'HOST':'localhost',
+        'PORT':3306,
 
     }
 }
@@ -121,7 +127,11 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / "Emp_app/static",
 ]
+STATIC_ROOT = BASE_DIR / "staticfiles"
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+MEDIA_URL='/media/'
+MEDIA_ROOT = BASE_DIR/'media'

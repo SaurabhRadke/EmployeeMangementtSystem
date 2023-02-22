@@ -1,0 +1,18 @@
+.container{
+    background-color: rgb(4, 117, 121);
+    margin-top: 100px;
+    position: relative;
+    height: 400px;
+    width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+}
+.container h1{
+    color:rgb(250, 158, 46);
+    margin-left: 50px;
+}
+#drop{
+    position: relative;
+    left:170px;
+    top:30px;
+}
