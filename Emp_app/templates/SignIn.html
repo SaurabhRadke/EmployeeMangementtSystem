@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIN Page</title>
+    <link rel="stylesheet" href="{% static 'stylee5.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="leftcont">
+                <i class="fa-solid fa-snowflake blue-color"></i>
+                <h2>Login</h2>
+                <h4>See your growth and get consulting support!</h4>
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <label for="text">Username</label><br>
+                    <input type="text" name="username" id="" placeholder="Enter Email" ><br>
+                    <label for="">Password*</label><br>
+                    <input type="password" name="password" id="" placeholder="Enter Password">
+                    <input type="checkbox" name="" id="check">
+                    <label for="" id="rem">Remeber Me</label>
+                    <a href="" id="pass">Forgot password?</a>
+                    <button type="submit">Login</button>
+                    <h5>Not registered yet?  <a href="">Create an Account</a></h5>
+                    
+                </form>
+            </div>
+        </div>
+        <div class="right" id="back">
+            <h4 id="rtext">Turn your ideas <span> into reality.</span></h4>
+            <img src="/static/image/instagram.jpg" alt="" id="INSTA">
+            <img src="/static/image/twitter.png" alt="" id="MESS">
+            <img src="/static/image/mess.jpg" alt="" id="TWI">
+            <img src="/static/image/PP.jpg" alt="" id="imgg">
+            <h6>Consistent quality and experience across <span>all platforms and devices.</span></h6>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/2028586b4a.js" crossorigin="anonymous"></script>
+</body>
+</html>

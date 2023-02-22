@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="{viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>ADD Details</title>
+    <link rel="stylesheet" href="{% static 'stylee3.css' %}">
+</head>
+<body>
+    <div class="head"><h2>Welcome to Employee Management System</h2></div>
+    <div class="container">
+    <form action="/addAnEmploye" method="POST">
+      {% csrf_token %}
+        <div class="h"><h2>Enter  Details</h2></div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">First Name</label>
+          <input type="text" class="form-control" value="{{ first_name }}" name="first_name" placeholder="First Name">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Last Name</label>
+            <input type="text" class="form-control" value="{{ last_name }}" name="last_name" placeholder="Last Name">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputDepartment" class="mb-2">Enter Department  </label>
+            <select class="form-select" aria-label="Default select example" name="department" >
+              {% for events in dep_list %}
+              <option name="department" value="{{ events.id }}" >{{events.id}} {{ events }}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputDepartment" class="mb-2">Enter Role </label>
+            <select class="form-select" aria-label="Default select example"  name="role">
+              <option selected> Role </option>
+              {% for r in role_list %}
+              <option name="role" value="{{ r.id }}">{{r.id}}  {{ r }}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label" >Salary</label>
+            <input type="number" class="form-control" value="{{ salary }}" name="salary" placeholder="Salary">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label" >Date of Birth (YYYY-MM-DD)</label>
+            <input type="datetime" class="form-control" value="{{ DOB }}" name="DOB" placeholder="Date of Birth">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Bonus</label>
+            <input type="datetime" class="form-control" value="{{ Bonus }}" name="Bonus" placeholder="Birth">
+          </div>
+        
+        <input type="submit" id="dam" class="btn btn-primary" value="select"></input>
+      </form>
+    </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
