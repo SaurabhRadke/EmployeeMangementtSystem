@@ -11,9 +11,11 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+DATABASE_URL = "postgresql://postgres:BRpGppQz2XNgSuhUg3EJ@containers-us-west-138.railway.app:5495/railway"
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -76,18 +78,20 @@ WSGI_APPLICATION = 'Employee_M_S.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'gitdatabase',
+#         'USER':'root',
+#         'PASSWORD':'Root',
+#         'HOST':'localhost',
+#         'PORT':3306,
+
+#     }
+# }
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'gitdatabase',
-        'USER':'root',
-        'PASSWORD':'Root',
-        'HOST':'localhost',
-        'PORT':3306,
-
-    }
+    "default": dj_database_url.config(default=DATABASE_URL , conn_max_age=1800),
 }
-
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
