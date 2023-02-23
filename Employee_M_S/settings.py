@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-9yzo9vrs=i2k(5_1o2#-ok))$o=im9+^c21n+x7_giubr6h*=h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['web-production-2729.up.railway.app','127.0.0:1']
+ALLOWED_HOSTS = ['web-production-2729.up.railway.app','127.0.0.1']
 
 
 # Application definition
@@ -78,13 +78,8 @@ WSGI_APPLICATION = 'Employee_M_S.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'gitdatabase',
-        'USER':'root',
-        'PASSWORD':'Root',
-        'HOST':'localhost',
-        'PORT':3306,
-
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
